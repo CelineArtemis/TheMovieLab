@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" styleClass="primary_color" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="moviesapp.controller.AppController">
+   <left>
+      <VBox prefHeight="200.0" prefWidth="250.0" spacing="20.0" styleClass="secondary-color" stylesheets="@style.css" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="43.0" prefWidth="250.0">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <children>
+                  <ImageView fitHeight="85.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/films.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <Separator prefHeight="0.0" prefWidth="226.0">
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </Separator>
+            <VBox prefHeight="120.0" prefWidth="250.0" spacing="10.0">
+               <children>
+                  <HBox alignment="CENTER" onMouseClicked="#handleGenresClick" prefHeight="50.0" prefWidth="200.0" spacing="20.0" styleClass="mouse-moved" stylesheets="@style.css">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/scope-categories-write-svgrepo-com.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="genresLabel" prefHeight="21.0" prefWidth="101.0" stylesheets="@style.css" text="Categories" textFill="#a1a1a1">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="20.0" styleClass="mouse-moved" stylesheets="@style.css">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/favorite-list-svgrepo-com.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="favoritesLabel" prefHeight="21.0" prefWidth="101.0" text="Your list" textFill="#a1a1a1">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Separator prefHeight="0.0" prefWidth="226.0">
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </Separator>
+            <VBox prefHeight="182.0" prefWidth="250.0" spacing="10.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="20.0" styleClass="mouse-moved" stylesheets="@style.css">
+                     <children>
+                        <Label fx:id="popularLabel" onMouseClicked="#handleDiscoverClick" prefHeight="27.0" prefWidth="190.0" stylesheets="@style.css" text="Popular" textFill="#a1a1a1">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="20.0" styleClass="mouse-moved" stylesheets="@style.css">
+                     <children>
+                        <Label fx:id="SimilarMovies" prefHeight="27.0" prefWidth="188.0" stylesheets="@style.css" text="For you " textFill="#a1a1a1">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox alignment="BOTTOM_CENTER" prefHeight="406.0" prefWidth="250.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="254.0" spacing="15.0">
+                     <children>
+                        <ImageView fitHeight="37.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/user.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="usernameLabel" text="Username" textFill="WHITE">
+                           <font>
+                              <Font name="Courier New Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Separator prefHeight="0.0" prefWidth="226.0">
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                  </Separator>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="254.0" spacing="15.0">
+                     <children>
+                        <Hyperlink fx:id="disconnectHyperLink" onMouseClicked="#handleDisconnectClick" text="Disconnect" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="1350.0" spacing="20.0" stylesheets="@style.css">
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+               <children>
+                  <HBox alignment="CENTER" maxHeight="-Infinity" prefHeight="35.0" prefWidth="207.0" styleClass="search-container" stylesheets="@style.css">
+                     <children>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" onMouseClicked="#searchMovies" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/ic_search.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="searchField" prefHeight="31.0" prefWidth="173.0" promptText="Rechercher..." style="-fx-background-color: transparent; -fx-text-fill: white;" styleClass="secondary-color" stylesheets="@style.css" text="Search... " />
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="4.0" top="4.0" />
+                     </HBox.margin>
+                  </HBox>
+                  <Pane prefHeight="46.0" prefWidth="171.0">
+                     <children>
+                        <ComboBox fx:id="filters" layoutX="7.0" layoutY="18.0" prefHeight="25.0" prefWidth="108.0" promptText="Filters" stylesheets="@style.css" visibleRowCount="3">
+                           <effect>
+                              <Glow />
+                           </effect>
+                           <styleClass>
+                              <String fx:value="search-container" />
+                              <String fx:value="combo-box-popup" />
+                           </styleClass></ComboBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="4.0" />
+                     </HBox.margin>
+                  </Pane>
+                  <HBox prefHeight="50.0" prefWidth="831.0" />
+               </children>
+            </HBox>
+            <ScrollPane fx:id="scrollPane" prefHeight="200.0" prefWidth="200.0" styleClass="transparent" stylesheets="@style.css" VBox.vgrow="ALWAYS">
+               <content>
+                  <VBox prefHeight="850.0" prefWidth="1335.0" spacing="10.0">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                     <children>
+                        <Label fx:id="DescriptionLabel" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <GridPane fx:id="movieContainer" prefHeight="30.0" prefWidth="1371.0" styleClass="primary_color" stylesheets="@style.css">
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                        </GridPane>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.Rating?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="288.0" prefWidth="661.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="moviesapp.controller.DetailsController">
+   <children>
+      <ImageView fx:id="moviePoster" fitHeight="288.0" fitWidth="280.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/jacket.jpg" />
+         </image>
+      </ImageView>
+      <VBox prefHeight="500.0" prefWidth="470.0" style="-fx-background-color: #373738;" stylesheets="@style.css">
+         <children>
+            <HBox prefHeight="46.0" prefWidth="469.0">
+               <children>
+                  <Label fx:id="title" prefHeight="42.0" prefWidth="491.0" text="OPPENHEIMER" textFill="WHITE">
+                     <font>
+                        <Font name="SansSerif Bold" size="24.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" top="15.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="year" prefHeight="42.0" prefWidth="315.0" text="(2023)" textFill="WHITE">
+                     <font>
+                        <Font name="SansSerif Bold" size="24.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" top="15.0" />
+                     </padding>
+                  </Label>
+                  <HBox alignment="TOP_RIGHT" prefHeight="46.0" prefWidth="48.0">
+                     <children>
+                        <ImageView fx:id="favorite" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#handleFavoriteClick" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/addfav.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <padding>
+                        <Insets right="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="24.0" prefWidth="469.0" spacing="5.0">
+               <children>
+                  <Label fx:id="releasedate" text="19/07/2023 ·" textFill="WHITE">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="genre" text="Drame, Histoire ·" textFill="WHITE">
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="runtime" text="2h 34m" textFill="WHITE">
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+            <Label text="Overview" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Regular" size="13.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" top="5.0" />
+               </padding>
+            </Label>
+            <Label fx:id="overview" prefHeight="85.0" prefWidth="449.0" text="Alors qu'Arthur Curry affronte ses responsabilités de Roi des Sept Mers, un pouvoir antique enfoui &#10;depuis longtemps se déchaîne. Après avoir été témoin de l'effet de ces forces obscures, Aquaman &#10;doit forger une alliance difficile avec un vieil ennemi et se lancer dans un voyage périlleux pour&#10;protéger sa famille, son royaume et le monde d'une dévastation irréversible." textFill="#d0cece">
+               <font>
+                  <Font name="Arial Italic" size="10.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+            </Label>
+            <Label prefHeight="29.0" prefWidth="65.0" text="Casting" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Regular" size="13.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+            </Label>
+            <Label fx:id="cast" alignment="TOP_LEFT" prefHeight="59.0" prefWidth="464.0" text=" fasdasdsadsad sadsadsadsadsad sad sad sad sad sad sad assdas" textFill="#d0cece">
+               <font>
+                  <Font name="Arial Italic" size="10.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+            </Label>
+            <HBox alignment="CENTER_RIGHT" prefHeight="34.0" prefWidth="469.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="34.0" prefWidth="469.0">
+                     <children>
+                        <Label prefHeight="35.0" prefWidth="30.0" text="By : " textFill="WHITE">
+                           <padding>
+                              <Insets bottom="10.0" top="10.0" />
+                           </padding>
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="director" prefHeight="35.0" prefWidth="134.0" text="Christopher Nolan" textFill="WHITE">
+                           <padding>
+                              <Insets bottom="10.0" top="10.0" />
+                           </padding>
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </HBox>
+                  <Rating fx:id="ratingControl" prefHeight="25.0" prefWidth="176.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <styleClass>
+      <String fx:value="shadow" />
+      <String fx:value="white-background" />
+   </styleClass>
+</HBox>
