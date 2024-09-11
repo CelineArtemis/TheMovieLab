@@ -6,7 +6,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
+  <a href="https://github.com/CelineArtemis/TheMovieLab">
     <img src="images/logo.png" alt="Logo" width="100" height="100">
   </a>
 
@@ -23,7 +23,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://www.univ-amu.fr/)
+<a href="https://github.com/CelineArtemis/TheMovieLab">
+  <img src="images/screenshot.png" alt="Logo" width="100" height="100">
+</a>
 
 The movie lab is a student project.
 <br />
