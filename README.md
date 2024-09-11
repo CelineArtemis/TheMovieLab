@@ -24,7 +24,7 @@
 ## About The Project
 
 <a href="https://github.com/CelineArtemis/TheMovieLab">
-  <img src="images/screenshot.png" alt="Logo" width="100" height="100">
+  <img src="images/screenshot.png" alt="Logo" >
 </a>
 
 The movie lab is a student project.
